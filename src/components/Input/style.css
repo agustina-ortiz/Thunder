@@ -1,0 +1,9 @@
+.appInput {
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(237, 245, 215);
+    border-color: black;
+    border-width: 2px;
+    border-radius: 15px;
+    float: right;
+}

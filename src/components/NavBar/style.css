@@ -24,10 +24,9 @@ li a:hover {
 }
 
 .brand {
-    float: right;
+    align-items: center;
     color: white;
     font-size: 30px;
-    margin-right: 35px;
     font-family: Arial, Helvetica, sans-serif;
     padding: 8px;
 }

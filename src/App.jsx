@@ -1,20 +1,16 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+//import Input from './components/Input';
+import ItemListContainer from './containers/ItemListContainer';
 
 function App() {
 
-/*   const nombre = "Agustina"
-  const edad = 18 */
-
   return (
     <div className='container'>
-      {/* <div className="App">
-       <p>{nombre}</p>
-       <p>Ortiz</p>
-       <p>{edad}</p>
-      </div> */}
       <NavBar/>
+      <ItemListContainer greeting={"Bienvenidos a Thunder"}/>
+      {/* <Input/> */}
     </div>
   );
 }

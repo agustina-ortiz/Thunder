@@ -1,0 +1,11 @@
+.iconoCarrito {
+    font-size: 25px;
+    padding: 10px;
+    margin-right: 10px;
+    float: right;
+    stroke: white;
+}
+
+path {
+    stroke: #FFFF;
+}
