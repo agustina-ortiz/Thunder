@@ -1,0 +1,34 @@
+p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.countContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.boton {
+  color: black;
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  font-size: 1.6rem;
+  transition: all 250ms ease-out;
+}
+
+.boton:hover {
+    border: black;
+    color: black;
+    background-color: rgb(138, 125, 139);
+}
+
+.botonAgregar {
+  font-size: 14px;
+  text-align: center;
+  height: 100%;
+  padding: 10px;
+  background-color: rgb(110, 84, 121);
+}
