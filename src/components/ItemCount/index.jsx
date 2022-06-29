@@ -15,7 +15,7 @@ const ItemCount = ({handleAdd, initialStock}) => {
 
   return (
     <div className='countContainer'>
-        <p>{counter}</p>
+        <p className='counter'>{counter}</p>
         <button className='boton'
          onClick={() => addProduct(-1)}
          disabled={counter === initial ? true : null}>

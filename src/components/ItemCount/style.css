@@ -1,4 +1,4 @@
-p {
+.counter {
     font-size: 22px;
     font-weight: bold;
 }
@@ -8,11 +8,12 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
   }
 
 .boton {
   color: black;
-  width: 100%;
+  width: 10%;
   height: 100%;
   border: 1px solid black;
   font-size: 1.6rem;
