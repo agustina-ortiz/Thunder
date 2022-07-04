@@ -1,0 +1,7 @@
+.mapProductos {
+    display: flex;
+    align-content: space-around;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    background-color: #222;
+}

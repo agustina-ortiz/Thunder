@@ -1,26 +1,20 @@
 .cardGeneral {
     display: flex;
     flex-wrap: wrap;
-    background-color: #222;
+    padding: 25px;
     justify-content: center;
 }
 
 .cardImage {
-    max-width: 400px;
+    max-width: 300px;
     padding: 1rem;
     padding-bottom: 0px;
 }
 
-.cardBody {
-    align-items: center;
-}
-
 .cardTitle {
     font-size: 22px;
-    align-self: center;
 }
 
 .cardPrecio {
     font-size: 20px;
-    align-items: center;
 }
