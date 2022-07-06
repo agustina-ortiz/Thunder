@@ -1,24 +1,25 @@
 [
     {
-      "precio": 6000,
+      "price": 6000,
       "id": 1,
       "title": "Buzo Unlimited",
-      "thumbnailUrl": "/mocks/images/unlimited.png"
+      "thumbnailUrl": "/mocks/images/unlimited.png",
+      "description": "Buzo unlimited. Rosa y Blanco."
     },
     {
-      "precio": 6000,
+      "price": 6000,
       "id": 2,
       "title": "Buzo Astronaut",
       "thumbnailUrl": "/mocks/images/astronaut.png"
     },
     {
-      "precio": 6000,
+      "price": 6000,
       "id": 3,
       "title": "Buzo Witch",
       "thumbnailUrl": "/mocks/images/witch.png"
     },
     {
-      "precio": 6000,
+      "price": 6000,
       "id": 4,
       "title": "Buzo Sky-king",
       "thumbnailUrl": "/mocks/images/skyking.png"

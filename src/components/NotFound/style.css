@@ -1,0 +1,6 @@
+.notfound {
+    display: flex;
+    justify-content: center;
+    color: rgb(231, 24, 24);
+    font-size: 40px;
+}

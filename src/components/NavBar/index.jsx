@@ -1,20 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CartWidget from '../CartWidget';
 import './style.css';
 
 const NavBar = () => {
-    return(
+    return (
         <nav>
             <ul>
-               <li><a className="active" href="#home">Home</a></li>
-               <li><a href="#news">Buzos</a></li>
-               <li><a href="#contact">Contacto</a></li>
-               <li><a href="#about">Nosotros</a></li>
+               <li><Link to='/'>Home</Link></li>
+               <li><Link to ='/category/buzos'>Buzos</Link></li>
+               <li><Link to='/category/contacto'>Contacto</Link></li>
+               <li><Link to='/category/nosotros'>Nosotros</Link></li>
             </ul>  
             <div className='brand'>Thunder</div>
             <CartWidget/> 
         </nav>
-        )
+    )
 }
 
 export default NavBar;
