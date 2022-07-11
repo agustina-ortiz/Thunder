@@ -1,20 +1,19 @@
 .counter {
-    font-size: 22px;
-    font-weight: bold;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 10px;
 }
 
-.countContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    background-color: #222;
-  }
+.counterPrincipal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
 
 .boton {
   color: black;
-  width: 10%;
+  width: 100%;
   height: 100%;
   border: 1px solid black;
   font-size: 1.6rem;
@@ -28,7 +27,9 @@
 }
 
 .botonAgregar {
-  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
   text-align: center;
   height: 100%;
   padding: 10px;

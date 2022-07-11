@@ -13,9 +13,10 @@ const ItemDetailContainer = () => {
     useEffect(() => {
         const getProductos = async () => {
             try {
-                const response = await fetch(`https://fakestoreapi.com/products/${params.productId}`);
+                const response = await fetch('/mocks/data.json');
                 const data = await response.json();
-                setProductDetail(data);
+                const productoSeleccionado = data.find(item => item.id === parseInt(params.productId))
+                setProductDetail(productoSeleccionado);
             } catch (error) {
                 console.log('Ocurrió un error');
                 console.log(error);

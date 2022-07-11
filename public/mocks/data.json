@@ -4,24 +4,35 @@
       "id": 1,
       "title": "Buzo Unlimited",
       "thumbnailUrl": "/mocks/images/unlimited.png",
-      "description": "Buzo unlimited. Rosa y Blanco."
+      "hoodie":"Buzo 'Unlimited'. Rosa y Blanco.",
+      "description": "Estilo canguro, confeccionado con friza clásica.",
+      "category": "capsuleI"
     },
     {
       "price": 6000,
       "id": 2,
       "title": "Buzo Astronaut",
-      "thumbnailUrl": "/mocks/images/astronaut.png"
+      "thumbnailUrl": "/mocks/images/astronaut.png",
+      "hoodie": "Buzo 'Astronaut'. Violeta y blanco.",
+      "description": "Estilo canguro, confeccionado con friza clásica.",
+      "category": "capsuleIII"
     },
     {
       "price": 6000,
       "id": 3,
       "title": "Buzo Witch",
-      "thumbnailUrl": "/mocks/images/witch.png"
+      "thumbnailUrl": "/mocks/images/witch.png",
+      "hoodie": "Buzo Witch. Rosa, azul y blanco.",
+      "description":"Estilo canguro, confeccionado con friza clásica.",
+      "category": "capsuleII"
     },
     {
       "price": 6000,
       "id": 4,
       "title": "Buzo Sky-king",
-      "thumbnailUrl": "/mocks/images/skyking.png"
+      "thumbnailUrl": "/mocks/images/skyking.png",
+      "hoodie": "Buzo 'Skyking'. Rojo y blanco.",
+      "description": "Estilo canguro, confeccionado con friza clásica.",
+      "category": "capsuleI"
     }
 ]

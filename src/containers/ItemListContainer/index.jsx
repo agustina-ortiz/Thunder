@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import ItemCount from '../../components/ItemCount';
 import ItemList from '../../components/ItemList';
 import './style.css';
 
@@ -12,6 +11,7 @@ const ItemListContainer = ({greeting}) => {
   const [productosFiltrados, setProductosFiltrados] = useState([]);
 
   const params = useParams();
+  console.log(params);
 
   useEffect(() => {
     const getProductos = async () => {
@@ -30,16 +30,12 @@ const ItemListContainer = ({greeting}) => {
 
   useEffect(() => {
     if (params?.categoryId) {
-    const productosFiltrados = productos.filter(producto => producto.category === params.categoryId)
+    const productosFiltrados = productos.filter(producto => producto.category === (params.categoryId))
     setProductosFiltrados(productosFiltrados)
     } else {
       setProductosFiltrados(productos);
     };
   }, [params, productos])
-  
-  const handleAdd = () => {
-    console.log("Se agregó al carrito")
-  }
 
   return (
     <div>
@@ -49,7 +45,6 @@ const ItemListContainer = ({greeting}) => {
          :
          null
         }
-        <ItemCount handleAdd={handleAdd}/>
     </div>
   )
 }
