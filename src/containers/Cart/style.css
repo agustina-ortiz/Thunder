@@ -1,0 +1,32 @@
+.divContainer {
+    display: flex;
+    background-color: rgb(131, 127, 127);
+}
+
+.cardCarrito {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+}
+
+.botonEliminar {
+    display: flex;
+    flex-direction: row;
+    font-size: 15px;
+    height: 100%;
+    width: fit-content;
+    padding: 5px;
+    background-color: rgb(110, 84, 121);
+}
+
+.botonVaciar {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    font-size: 15px;
+    height: 100%;
+    width: fit-content;
+    padding: 5px;
+    background-color: rgb(110, 84, 121);
+}

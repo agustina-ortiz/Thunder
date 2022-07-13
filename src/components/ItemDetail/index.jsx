@@ -1,6 +1,8 @@
 import React from 'react'
+import { useContext } from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Shop } from '../../context/ShopContext';
 import ItemCount from '../ItemCount';
 import './style.css'
 
@@ -11,12 +13,15 @@ const ItemDetail = ({product}) => {
   product.stock = 4;
   const [qtyAdded, setQtyAdded] = useState(0);
 
+  const {addItem} = useContext(Shop);
+
   const handleConfirm = (qty) => {
-   setQtyAdded(qty);
+    setQtyAdded(qty);
   }
 
   const handleFinish = () => {
-    navigate('/cart')
+    addItem(product, qtyAdded);
+    navigate('/cart');
   }
 
   console.log(qtyAdded);

@@ -7,7 +7,7 @@ import './style.css';
 
 const ItemListContainer = ({greeting}) => {
 
-  const [productos, setProductos] = useState(null);
+  const [productos, setProductos] = useState([]);
   const [productosFiltrados, setProductosFiltrados] = useState([]);
 
   const params = useParams();
@@ -30,11 +30,11 @@ const ItemListContainer = ({greeting}) => {
 
   useEffect(() => {
     if (params?.categoryId) {
-    const productosFiltrados = productos.filter(producto => producto.category === (params.categoryId))
-    setProductosFiltrados(productosFiltrados)
+     const productosFiltrados = productos.filter(producto => producto.category === params.categoryId)
+     setProductosFiltrados(productosFiltrados)
     } else {
       setProductosFiltrados(productos);
-    };
+    }
   }, [params, productos])
 
   return (
@@ -43,7 +43,7 @@ const ItemListContainer = ({greeting}) => {
         {productos ?
          <ItemList products={productosFiltrados}/>
          :
-         null
+         <p>Loading...</p>
         }
     </div>
   )

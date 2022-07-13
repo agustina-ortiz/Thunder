@@ -1,7 +1,16 @@
 .iconoCarrito {
+    display: flex;
+    align-items: center;
     font-size: 25px;
     padding: 10px;
     margin-right: 10px;
+    color: #FFFF;
+}
+
+.productsCarrito {
+    font-size: 20px;
+    padding: 10px;
+
 }
 
 path {
