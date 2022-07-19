@@ -16,12 +16,15 @@ const ItemDetail = ({product}) => {
   const {addItem} = useContext(Shop);
 
   const handleConfirm = (qty) => {
+    addItem(product, qtyAdded);
     setQtyAdded(qty);
   }
 
   const handleFinish = () => {
-    addItem(product, qtyAdded);
     navigate('/cart');
+  }
+  const handleContinue = () => {
+    navigate('/');
   }
 
   console.log(qtyAdded);
@@ -32,11 +35,14 @@ const ItemDetail = ({product}) => {
       <img height={300} src={product.thumbnailUrl} alt='buzo'/>
       <h2>{'$' + product.price}</h2>
       <h3 className='hoodie'>{product.hoodie}</h3>
-      <h3 className='description'>{product.description}</h3>
+      <h3 className='descriptionDetail'>{product.description}</h3>
       {!qtyAdded ?
         <ItemCount handleAdd={handleConfirm} initialStock={product.stock}/>
         :
-        <button className='botonFinalizar' onClick={handleFinish}>Finalizar compra</button>
+        <>
+          <button className='botonSeguirYFinalizar' onClick={handleContinue}>Seguir comprando</button>
+          <button className='botonSeguirYFinalizar' onClick={handleFinish}>Finalizar compra</button>
+        </>
       }
     </div>
   )

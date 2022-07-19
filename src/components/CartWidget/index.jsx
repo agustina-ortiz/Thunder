@@ -9,10 +9,14 @@ const CartWidget = () => {
   const {cart} = useContext(Shop);
 
   return (
-    <div className='iconoCarrito'>
-        <GrCart/>
-        {cart.length && <span className='productsCarrito'>({cart.length})</span>}
-    </div>
+    <>
+      {cart.length > 0 &&
+        <div className='iconoCarrito'>
+            <GrCart/>
+            {cart.length && <span className='productsCarrito'>({cart.length})</span>}
+        </div>
+      }
+    </>
   )
 }
 

@@ -20,7 +20,7 @@ const Item = ({product}) => {
         <Card.Text className='cardPrecio' >
           ${product.price}
         </Card.Text>
-        <Button variant="primary">Agregar al carrito</Button>
+        <Button className='cardButton'>Ver detalle</Button>
       </Card.Body>
     </Card>
   )

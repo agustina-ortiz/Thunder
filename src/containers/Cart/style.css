@@ -6,8 +6,17 @@
 .cardCarrito {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 40px;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.description {
+    display: flex;
+    width: 270px;
+    margin: 0px;
+    align-items: center;
 }
 
 .botonEliminar {
@@ -20,13 +29,57 @@
     background-color: rgb(110, 84, 121);
 }
 
-.botonVaciar {
+.footer {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    margin: 20px;
+    align-items: center;
+    width: 100vh;
+    justify-content: space-around;
+    background-color: hsla(291, 15%, 17%, 0.7);;
+}
+
+.footerTotal {
+    display: flex;
+    font-size: 20px;
+
+}
+
+.FooterbotonVaciar {
+    display: flex;
+    font-size: 17px;
+    padding: 5px;
+    height: fit-content;
+    background-color: rgb(110, 84, 121);
+}
+
+.divVaciarCarrito {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0px;
-    font-size: 15px;
-    height: 100%;
-    width: fit-content;
-    padding: 5px;
+    align-items: center;
+}
+
+.txtCarritoVacio {
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-size: 30px;
+}
+
+a {
+    color: black;
+}
+
+.btnVaciarCarrito {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+    margin: 5px;
     background-color: rgb(110, 84, 121);
 }

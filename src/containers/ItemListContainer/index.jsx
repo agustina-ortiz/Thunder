@@ -39,7 +39,6 @@ const ItemListContainer = ({greeting}) => {
 
   return (
     <div>
-        {<p className='greeting'>{greeting}</p>}
         {productos ?
          <ItemList products={productosFiltrados}/>
          :
