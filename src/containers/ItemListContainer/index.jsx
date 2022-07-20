@@ -3,7 +3,9 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList';
+import { collection, query, getDocs } from "firebase/firestore";
 import './style.css';
+import { db } from '../../firebase/config';
 
 const ItemListContainer = ({greeting}) => {
 
@@ -16,10 +18,17 @@ const ItemListContainer = ({greeting}) => {
   useEffect(() => {
     const getProductos = async () => {
       try {
-        const response = await fetch('/mocks/data.json');
-        const data = await response.json();
-        setProductos(data);
-        setProductosFiltrados(data);
+        const q = query(collection(db, "products"));
+        const querySnapshot = await getDocs(q);
+        const productos = []
+        querySnapshot.forEach((doc) => {
+          productos.push({id: doc.id, ...doc.data()});
+        });
+
+        console.log(productos);
+
+        setProductos(productos);
+        setProductosFiltrados(productos);
       } catch (error) {
         console.log("Hubo un error");
         console.log(error);
