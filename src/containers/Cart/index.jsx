@@ -1,12 +1,16 @@
 import React from 'react'
 import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import ContactForm from '../../components/ContacForm'
+import Modal from '../../components/Modal'
 import { Shop } from '../../context/ShopContext'
+import { useModal } from '../../hooks/useModal'
 import './style.css'
 
 const Cart = () => {
   const {cart, removeItem, clearCart} = useContext(Shop);
   console.log(cart.length);
+  const [isOpenModal, openModal, closeModal] = useModal(false);
 
   return (
     <>
@@ -25,7 +29,11 @@ const Cart = () => {
         <div className='footer'>
           <p className='footerTotal'>Total</p>
           <p>$</p>
-          <button onClick={clearCart} className='FooterbotonVaciar'>Vaciar carrito</button>
+          <button onClick={clearCart} className='Footerbotones'>Vaciar carrito</button>
+          <Modal isOpen={isOpenModal} closeModal={closeModal}>
+            <ContactForm/>
+          </Modal>
+          <button onClick={openModal} className='Footerbotones'>Finalizar compra</button>
         </div>
       </div>
       :

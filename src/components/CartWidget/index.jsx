@@ -13,7 +13,7 @@ const CartWidget = () => {
       {cart.length > 0 &&
         <div className='iconoCarrito'>
             <GrCart/>
-            {cart.length && <span className='productsCarrito'>({cart.length})</span>}
+            <span className='productsCarrito'>{cart.reduce((acum, productoActual) => acum += productoActual.quantity, 0)}</span>
         </div>
       }
     </>

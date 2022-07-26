@@ -16,7 +16,7 @@ const ItemDetail = ({product}) => {
   const {addItem} = useContext(Shop);
 
   const handleConfirm = (qty) => {
-    addItem(product, qtyAdded);
+    addItem(product, qty);
     setQtyAdded(qty);
   }
 
@@ -41,7 +41,7 @@ const ItemDetail = ({product}) => {
         :
         <>
           <button className='botonSeguirYFinalizar' onClick={handleContinue}>Seguir comprando</button>
-          <button className='botonSeguirYFinalizar' onClick={handleFinish}>Finalizar compra</button>
+          <button className='botonSeguirYFinalizar' onClick={handleFinish}>Ir al carrito</button>
         </>
       }
     </div>
