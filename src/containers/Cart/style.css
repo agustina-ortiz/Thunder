@@ -1,57 +1,96 @@
 .divContainer {
     display: flex;
+    flex-direction: column;
+    justify-content: right;
+    padding: 30px;
     background-color: rgb(131, 127, 127);
 }
 
-.cardCarrito {
-    display: flex;
-    flex-direction: column;
-    padding: 40px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 60px;
+.table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.description {
+.tablaHeader {
     display: flex;
-    width: 270px;
-    margin: 0px;
+    justify-content: space-around;
     align-items: center;
+    padding: 30px;
+    margin: 0px 30px;
+    font-size: 18px;
+    border-bottom: 1px solid rgb(73, 72, 73);
 }
 
-.botonEliminar {
+.productoEnCart {
     display: flex;
     flex-direction: row;
-    font-size: 15px;
-    height: 100%;
-    width: fit-content;
-    padding: 5px;
-    background-color: rgb(110, 84, 121);
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(73, 72, 73);
+}
+
+.tablaItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 350px;
+}
+
+.itemImage {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-right: 15px;
+}
+
+.itemQty {
+    padding-left: 55px;
+}
+
+.itemPrice {
+    padding-right: 10px;
+}
+
+.tablaItem, .itemQty, .itemPrice {
+    width: 33%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.itemBoton {
+    background-color: rgb(131, 127, 127);
+    font-size: 22px;
+    border: none;
 }
 
 .footer {
     display: flex;
     flex-direction: row;
-    position: fixed;
-    bottom: 0%;
-    right: 0%;
-    margin: 20px;
+    padding: 20px 30px;
+    justify-content: flex-end;
     align-items: center;
-    width: 100vh;
-    justify-content: space-around;
-    background-color: hsla(291, 15%, 17%, 0.7);;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid rgb(73, 72, 73);
 }
 
 .footerTotal {
     display: flex;
-    font-size: 20px;
-
+    margin: 0px 10px;
 }
 
-.Footerbotones {
+.botonesCart {
     display: flex;
-    font-size: 17px;
+    padding: 30px 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.footerBotones {
+    display: flex;
+    font-size: 16px;
     padding: 5px;
+    margin: 0px 10px;
     height: fit-content;
     background-color: rgb(110, 84, 121);
 }

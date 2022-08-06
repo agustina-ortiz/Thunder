@@ -3,37 +3,30 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import ItemList from '../../components/ItemList';
-import { collection, query, getDocs } from "firebase/firestore";
-import './style.css';
-import { db } from '../../firebase/config';
+import getCollection from '../../utils/getCollection';
+import swal from 'sweetalert2';
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = () => {
 
   const [productos, setProductos] = useState([]);
   const [productosFiltrados, setProductosFiltrados] = useState([]);
 
   const params = useParams();
-  console.log(params);
 
   useEffect(() => {
     const getProductos = async () => {
       try {
-        const q = query(collection(db, "products"));
-        const querySnapshot = await getDocs(q);
-        const productos = []
-        querySnapshot.forEach((doc) => {
-          productos.push({id: doc.id, ...doc.data()});
-        });
-
-        console.log(productos);
-
+        const productos = await getCollection("products");
         setProductos(productos);
         setProductosFiltrados(productos);
       } catch (error) {
-        console.log("Hubo un error");
-        console.log(error);
-      }
-    }
+          swal.fire({
+            title: 'Ha ocurrido un error',
+            icon: 'error',
+            timer: 2000
+          });
+      };
+    };
     getProductos()
   }, [])
 
@@ -43,7 +36,7 @@ const ItemListContainer = ({greeting}) => {
      setProductosFiltrados(productosFiltrados)
     } else {
       setProductosFiltrados(productos);
-    }
+    };
   }, [params, productos])
 
   return (
@@ -54,7 +47,7 @@ const ItemListContainer = ({greeting}) => {
          <p>Loading...</p>
         }
     </div>
-  )
-}
+  );
+};
 
 export default ItemListContainer

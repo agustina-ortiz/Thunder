@@ -25,6 +25,6 @@ function App() {
       </BrowserRouter>
     </ShopProvider>
   );
-}
+};
 
 export default App;

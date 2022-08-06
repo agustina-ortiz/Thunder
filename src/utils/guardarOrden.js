@@ -1,12 +1,12 @@
 import { addDoc, collection, doc, getDoc, writeBatch } from "firebase/firestore";
 import { db } from "../firebase/config";
+import swal from 'sweetalert2';
 
 const guardarOrden = (cart, orden) => {
-  console.log("Guardar orden");
   console.log(cart);
   console.log(orden);
 
-  const batch = writeBatch(db)
+  const batch = writeBatch(db);
 
   const outOfStock = [];
 
@@ -20,27 +20,33 @@ const guardarOrden = (cart, orden) => {
                 stock: producto.stock - productoEnCart.quantity
             })
         } else {
-            outOfStock.push(producto)
+            outOfStock.push(producto);
         }
         console.log(outOfStock);
 
         if (outOfStock.length === 0) {
             addDoc(collection(db, 'orders'), orden).then(({id}) => {
                 batch.commit().then(() => {
-                    alert("Se generó la orden con id: " + id)
-                })
+                    swal.fire({
+                        title: 'Se generó la orden con id: ' + id,
+                        icon:'success',
+                        confirmButtonText: "Aceptar",
+                        confirmButtonColor: "#883CC4",
+                    });
+                });
             }).catch((err) => {
                 console.log(`Error: ${err.message}`);
-            })
+            });
         } else {
-            let mensaje = ''
-            for (const producto of outOfStock) {
-                mensaje =+ `${producto.title}`
-            }
-            alert(`Productos fuera de stock ${mensaje}`)
-        }
-    })
-  })
+            swal.fire({
+                title: `Lo siento! ${producto.title} fuera de stock`,
+                icon: 'error',
+                confirmButtonText: "Aceptar",
+                confirmButtonColor: "#883CC4",
+            });
+        };
+    });
+  });
 
 
 }

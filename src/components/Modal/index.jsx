@@ -1,5 +1,5 @@
-import React from 'react'
-import './style.css'
+import React from 'react';
+import './style.css';
 
 const Modal = ({children, isOpen, closeModal}) => {
   return <article className={`modal ${isOpen && "is-open"}`}>
@@ -8,6 +8,6 @@ const Modal = ({children, isOpen, closeModal}) => {
         {children}
     </div>
   </article>
-}
+};
 
 export default Modal;

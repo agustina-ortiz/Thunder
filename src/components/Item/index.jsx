@@ -8,9 +8,8 @@ const Item = ({product}) => {
   const navigate = useNavigate();
   
   const handleDetail = () => {
-    console.log('navega');
-    navigate(`/detail/${product.id}`)
-  }
+    navigate(`/detail/${product.id}`);
+  };
 
   return (
     <Card className='cardGeneral'  onClick={handleDetail}>
@@ -23,7 +22,7 @@ const Item = ({product}) => {
         <Button className='cardButton'>Ver detalle</Button>
       </Card.Body>
     </Card>
-  )
-}
+  );
+};
 
 export default Item

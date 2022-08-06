@@ -6,7 +6,7 @@ const ordenGenerada = (cart, {name, email, telefono}) => {
             telefono: telefono
         },
         items: cart
-    }
-}
+    };
+};
 
 export default ordenGenerada;

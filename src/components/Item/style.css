@@ -6,8 +6,8 @@
 }
 
 .cardImage {
-    max-width: 320px;
-    margin: 50px;
+    max-width: 450px;
+    margin: 20px;
 }
 
 .cardBody {
@@ -32,4 +32,8 @@
     height: 100%;
     padding:8px;
     background-color: rgb(110, 84, 121);
+}
+
+button {
+    cursor: pointer;
 }

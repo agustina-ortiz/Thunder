@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import { helpHttp } from "../helper/helpHttp";
 
  export const useForm = (initialForm, validateForm) => {
@@ -12,13 +12,13 @@ import { helpHttp } from "../helper/helpHttp";
     setForm({
         ...form,
         [name]: value
-    })
-  }
+    });
+  };
 
   const handleBlur = (e) => {
     handleChange(e);
     setErrors(validateForm(form));
-  }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,8 +30,8 @@ import { helpHttp } from "../helper/helpHttp";
             .post("https://formsubmit.co/ajax/buzosthunder@gmail.com", {
                 body:form,
                 headers:{
-                    "Content-Type":"application/json",
-                    Accept: "application/json"
+                  "Content-Type":"application/json",
+                  Accept: "application/json"
                 },
             })
             .then((res) => {
@@ -41,13 +41,13 @@ import { helpHttp } from "../helper/helpHttp";
                 setTimeout(() => setResponse(false), 10000);
             });
     } else {
-        return;
-    }
-  }
+       return;
+      };
+  };
 
   return {
     form, errors, loading, response, handleChange, handleBlur, handleSubmit
   };
-}
+};
 
 export default useForm

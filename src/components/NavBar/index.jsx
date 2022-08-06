@@ -14,9 +14,9 @@ const NavBar = () => {
                <li><Link to='/category/capsuleIII'>Capsule III</Link></li>
             </ul>  
             <div className='brand'><Link to='/'>Thunder</Link></div>
-            <CartWidget/> 
+            <Link to='/cart'><CartWidget/></Link>
         </nav>
-    )
-}
+    );
+};
 
 export default NavBar;

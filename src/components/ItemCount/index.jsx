@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
-import './style.css'
+import React, { useState } from 'react';
+import './style.css';
 
 const ItemCount = ({handleAdd, initialStock}) => {
 
   const initial = 1;
 
-  const stock = 4;
+  const stock = 20;
 
   const [counter, setCounter] = useState(initial);
 
   const addProduct = (num) => {
     setCounter(counter + num);
-  }
+  };
 
   return (
     <div className='countContainer'>
@@ -30,7 +30,7 @@ const ItemCount = ({handleAdd, initialStock}) => {
       </div>
       <button className='botonAgregar' onClick={()=> handleAdd(counter)}>Agregar al carrito</button>
     </div>
-  )
-}
+  );
+};
 
 export default ItemCount

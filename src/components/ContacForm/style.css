@@ -26,7 +26,7 @@ textarea {
     width: 100%;
 }
 
-.boton {
+.botonEnviar {
     display: flex;
     font-size: 13px;
     text-align: center;
