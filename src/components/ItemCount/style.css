@@ -11,7 +11,7 @@
   align-items: center;
 }
 
-.boton {
+.botonMasMenos {
   color: black;
   width: 100%;
   height: 100%;
@@ -20,7 +20,7 @@
   transition: all 250ms ease-out;
 }
 
-.boton:hover {
+.botonMasMenos:hover {
     border: black;
     color: black;
     background-color: rgb(138, 125, 139);
